@@ -14,13 +14,13 @@ END FUNCTION
 
 DECLARATION
   FUNCTION len(INPUT text : STRING) -> INTEGER
-  reversedText = Array[1...N] OF STRING
-  text : STRING
+  reversedText, text : STRING
   i : INTEGER
+  
 ALGORITHM
   READ text
   
-  FOR i <- len(text) TO 0  DO
+  FOR i <- (len(text) - 1) DOWN TO 0 DO
     reversedText <- reversedText + text[i] 
   END FOR
 
