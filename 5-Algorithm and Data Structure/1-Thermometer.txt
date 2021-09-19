@@ -1,0 +1,18 @@
+DECLARATION
+  suhu, result : REAL
+  skalaSuhu : STRING
+
+ALGORITHM
+  READ suhu
+  READ skalaSuhu
+
+  IF skalaSuhu = "Fahrenheit" THEN
+    result <- (suhu - 32) * (5/9)
+    DISPLAY result
+  ELSE IF skalaSuhu = "Kelvin" THEN
+    result <- suhu - 273.15
+    DISPLAY result
+  ELSE 
+    result <- suhu
+    DISPLAY result
+  END IF

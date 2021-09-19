@@ -1,0 +1,18 @@
+DECLARATION
+  CONST minNilai = 1
+  maxNilai : INTEGER
+
+ALGORITHM
+   READ maxNilai
+
+  FOR i <- minNilai TO maxNilai DO
+    IF (i mod 3 = 0) AND (i mod 5 = 0) THEN
+      DISPLAY "FizzBuzz"
+    ELSE IF (i mod 3 = 0) THEN
+      DISPLAY "Fizz"
+    ELSE IF (i mod 5 = 0) THEN
+      DISPLAY "Buzz"
+    ELSE
+      DISPLAY i
+    END IF
+  END FOR

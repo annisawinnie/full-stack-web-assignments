@@ -1,0 +1,31 @@
+FUNCTION len(INPUT text : STRING) -> INTEGER
+  DECLARATION
+    len, i : INTEGER
+
+  ALGORITHM
+    len <- 0
+
+    WHILE text[i] != NULL DO
+      len <- len + 1
+    END WHILE
+
+    RETURN len
+END FUNCTION
+
+DECLARATION
+  FUNCTION len(INPUT text : STRING) -> INTEGER
+  reversedText = Array[1...N] OF STRING
+  text : STRING
+  i : INTEGER
+ALGORITHM
+  READ text
+  
+  FOR i <- len(text) TO 0  DO
+    reversedText <- reversedText + text[i] 
+  END FOR
+
+  IF text = reversedText THEN
+    RETURN TRUE
+  ELSE
+    RETURN FALSE
+  END IF 

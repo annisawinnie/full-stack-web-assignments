@@ -1,0 +1,23 @@
+DECLARATION
+  originalScore, finalScore : INTEGER
+
+ALGORITHM
+  READ originalScore
+  
+  IF (originalScore >= 68) THEN
+    IF (originalScore % 5 == 3) THEN
+      finalScore = originalScore + 2
+    ELSE IF (originalScore % 5 == 4) THEN
+      finalScore <- originalScore + 1
+    ELSE
+      finalScore <- originalScore
+    END IF
+
+    DISPLAY "Original Score  : ", originalScore
+    DISPLAY "Final Score : ", finalScore
+    DISPLAY "Status      : Passed"
+  ELSE
+    DISPLAY "Original Score  : ", originalScore
+    DISPLAY "Final Score : ", originalScore
+    DISPLAY "Status  : Not Passed"
+  END IF
