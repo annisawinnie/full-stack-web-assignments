@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Skilvul</title>
+  </head>
+  <body>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" />
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" />
+    <button id="btn-submit" style="display: block; margin-top: 10px">submit</button>
+    <script>
+      /// EDIT DOWN HERE
+      const elEmail = document.querySelector("#email");
+      const elPassword = document.querySelector("#password");
+      const elBtnSubmit = document.querySelector("#btn-submit");
+
+      const emailValidator = new RegExp("\\w+@\\w+\\.\\w+");
+      const passwdValidator = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&*])[A-Za-z\\d@$!%*?&]{8,}$");
+
+      elBtnSubmit.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        if (!emailValidator.test(elEmail.value)) {
+          alert("Tolong masukkan email yang valid");
+          elPassword.value = "";
+          return;
+        }
+
+        if (!passwdValidator.test(elPassword.value)) {
+          alert("Tolong masukkan password sesuai ketentuan");
+          elPassword.value = "";
+          return;
+        }
+
+        elPassword.value = "";
+        elEmail.value = "";
+        alert("Welcome to The Jungle");
+      });
+    </script>
+  </body>
+</html>
