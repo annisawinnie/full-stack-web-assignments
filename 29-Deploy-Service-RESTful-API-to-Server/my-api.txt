@@ -1,0 +1,12 @@
+URL: https://annisa-winnie-ardianti.herokuapp.com
+
+1. GET /hewan
+  Menampilkan semua data hewan
+
+2. GET /hewan/:id
+  Menampilkan data hewan berdasarkan id 3. POST /hewan
+  Menambahkan satu data hewan. PUT /hewan/:id
+  Mengupdate data hewan berdasarkan id
+
+5. DELETE /hewan/:id
+  Menghapus satu data hewan berdasarkan id
